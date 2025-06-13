@@ -103,7 +103,7 @@ function App() {
       
         <button
         onClick={toggleDarkMode}
-        className="fixed right-5 top-5  transition-all"
+        className="fixed right-5 top-5  transition-all cursor-pointer"
       >
         {darkMode === 'dark' ? ' ☀️' : ' 🌙'}
       </button>
