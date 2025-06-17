@@ -103,7 +103,7 @@ function App() {
       
         <button
         onClick={toggleDarkMode}
-        className="fixed right-5 top-5  transition-all cursor-pointer"
+        className="fixed sm:right-5 right-1 sm:top-5 top-2  transition-all cursor-pointer"
       >
         {darkMode === 'dark' ? ' ☀️' : ' 🌙'}
       </button>
@@ -114,8 +114,8 @@ function App() {
           setRecentHistory={setRecentHistory}
           setSelectedHistory={setSelectedHistory}
         />
-        <div className="col-span-4 p-10">
-          <h1 className="text-4xl bg-clip-text mb-6 text-transparent animate-bounce bg-gradient-to-r from-pink-700 to-violet-700">
+        <div className="col-span-4 sm:p-10 p-5">
+          <h1 className="sm:text-4xl font-serif text-xl bg-clip-text sm:mb-6 mb-10 text-transparent animate-bounce bg-gradient-to-r from-blue-500 to-lime-300">
             Hello User, Ask me Anything
           </h1>
           {loader ? (
@@ -140,8 +140,8 @@ function App() {
             </div>
           ) : null}
 
-          <div ref={scrollToAns} className="container h-110 overflow-scroll bg-red-100 dark:bg-zinc-800">
-            <div className="dark:text-zinc-300 text-zinc-800 p-5">
+          <div ref={scrollToAns} className="container h-110 overflow-scroll sm:w-full w-84 bg-red-100 dark:bg-zinc-800">
+            <div className="dark:text-zinc-300 text-zinc-800 sm:p-5 p-2">
               <ul>
                 {result.map((item, index) => (
                   <QuestionAnswer key={index} item={item} index={index} />
@@ -150,7 +150,7 @@ function App() {
             </div>
           </div>
           <div
-            className="dark:bg-zinc-800 bg-red-100 w-1/2 p-1 pr-5 dark:text-white text-zinc-800 mt-4  m-auto rounded-4xl
+            className="dark:bg-zinc-800 bg-red-100 sm:w-1/2 p-1 pr-5 dark:text-white text-zinc-800 mt-4 sm:mt-6 sm:m-auto w-84 rounded-4xl
       border border-zinc-700 flex h-16"
           >
             <input
